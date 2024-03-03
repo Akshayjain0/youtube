@@ -16,7 +16,7 @@ export const ContextProvider = ({ children }) => {
 	const fetchSelectedCategoryData = (query) => {
 		setLoading(true);
 		fetchDataFromApi(`search/?q=${query}`).then(({ contents }) => {
-		    console.log(contents);
+		    // console.log(contents);
 		    setSearchResults(contents);
 		    setLoading(false);
 		});
