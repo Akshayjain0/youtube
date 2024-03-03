@@ -14,12 +14,12 @@ export const ContextProvider = ({ children }) => {
 	}, [selectedCategory]);
 
 	const fetchSelectedCategoryData = (query) => {
-		// setLoading(true);
-		// fetchDataFromApi(`search/?q=${query}`).then(({ contents }) => {
-		//     console.log(contents);
-		//     setSearchResults(contents);
-		//     setLoading(false);
-		// });
+		setLoading(true);
+		fetchDataFromApi(`search/?q=${query}`).then(({ contents }) => {
+		    console.log(contents);
+		    setSearchResults(contents);
+		    setLoading(false);
+		});
 	};
 	return (
 		<Context.Provider
